@@ -1,5 +1,14 @@
-<h1>New Blog</h1>
-
-<%= render 'form', blog: @blog %>
-
-<%= link_to 'Back', blogs_path %>
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8 col-md-10 mx-auto">
+      <% if logged_in? %>
+      <h3>新規投稿する</h3>
+      <br>
+      <%= render 'form', blog: @blog %>
+      <br>
+      <%= link_to '戻る', blogs_path %>
+    <% else %>
+    <% end %>
+    </div>
+  </div>
+</div>
