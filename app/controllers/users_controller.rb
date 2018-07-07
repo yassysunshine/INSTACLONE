@@ -1,10 +1,10 @@
 class UsersController < ApplicationController
   def new
-    @use = User.new
+    @user = User.new
   end
   
   def create
-    @use = User.new(user_params)
+    @user = User.new(user_params)
     if @user.save
       redirect_to user_path(@user.id)
     else
@@ -13,13 +13,14 @@ class UsersController < ApplicationController
   end
   
   def show
-    @use = User.find(params[:id])
+    @user = User.find(params[:id])
+    @favorites_blogs = @user.favorite_blogs
   end
   
   private
   
   def user_params
-    params.require(:user).permit(:name, :email, :password, :password_confirmation)
+    params.require(:user).permit(:name, :email, :password,:password_confirmation, :icon, :icon_cache)
   end  
 
 end

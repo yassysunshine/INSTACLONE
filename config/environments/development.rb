@@ -32,7 +32,7 @@ Rails.application.configure do
   config.action_mailer.perform_caching = false
   
   config.action_mailer.default_url_options = { host: 'dive-into-code-yassy.c9users.io'}
-  config.action_mailer.deliver_method ~ :letter_opener
+  config.action_mailer.deliver_method :letter_opener
 
   # Print deprecation notices to the Rails logger.
   config.active_support.deprecation = :log

@@ -1,6 +1,6 @@
 class BlogsController < ApplicationController
   before_action :set_blog, only: [:show, :edit, :update, :destroy]
-  # before_action :login_check, only: [:new, :edit, :update, :destroy, :show]
+  before_action :login_check, only: [:new, :edit, :update, :destroy, :show]
 
   # GET /blogs
   # GET /blogs.json
@@ -71,13 +71,13 @@ class BlogsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def blog_params
-      params.require(:blog).permit(:content, :image)
+      params.require(:blog).permit(:content, :image, :image_cache)
     end
 
-    # def login_check
-    #   unless current_user.present?
-    #     flash[:alert] = "ログインしてください"
-    #     redirect_to root_path
-    #   end
-    # end
+    def login_check
+      unless current_user.present?
+        flash[:alert] = "ログインしてください"
+        redirect_to root_path
+      end
+    end
 end

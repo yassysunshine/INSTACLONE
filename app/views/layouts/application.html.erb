@@ -174,7 +174,6 @@
     <%= flash.each do |key, value| %>
       <%= content_tag(:div, value, class: "#{key}") %>
     <% end %>
-    
     <% if logged_in? %>
       <%= link_to "Profile", user_path(current_user.id)%>
       <%= link_to "Logout", session_path(current_user.id), method: :delete %>
@@ -185,45 +184,45 @@
     
     <%= yield %>
     
-    <section class="contact bg-primary" id="contact">
-      <div class="container">
-        <h2>We
-          <i class="fa fa-heart"></i>
-          new friends!</h2>
-        <ul class="list-inline list-social">
-          <li class="list-inline-item social-twitter">
-            <a href="#">
-              <i class="fa fa-twitter"></i>
-            </a>
-          </li>
-          <li class="list-inline-item social-facebook">
-            <a href="#">
-              <i class="fa fa-facebook"></i>
-            </a>
-          </li>
-          <li class="list-inline-item social-google-plus">
-            <a href="#">
-              <i class="fa fa-google-plus"></i>
-            </a>
-          </li>
-        </ul>
-      </div>
-    </section>
+    <!--<section class="contact bg-primary" id="contact">-->
+    <!--  <div class="container">-->
+    <!--    <h2>We-->
+    <!--      <i class="fa fa-heart"></i>-->
+    <!--      new friends!</h2>-->
+    <!--    <ul class="list-inline list-social">-->
+    <!--      <li class="list-inline-item social-twitter">-->
+    <!--        <a href="#">-->
+    <!--          <i class="fa fa-twitter"></i>-->
+    <!--        </a>-->
+    <!--      </li>-->
+    <!--      <li class="list-inline-item social-facebook">-->
+    <!--        <a href="#">-->
+    <!--          <i class="fa fa-facebook"></i>-->
+    <!--        </a>-->
+    <!--      </li>-->
+    <!--      <li class="list-inline-item social-google-plus">-->
+    <!--        <a href="#">-->
+    <!--          <i class="fa fa-google-plus"></i>-->
+    <!--        </a>-->
+    <!--      </li>-->
+    <!--    </ul>-->
+    <!--  </div>-->
+    <!--</section>-->
 
     <footer>
       <div class="container">
         <p>&copy; Your Website 2018. All Rights Reserved.</p>
-        <ul class="list-inline">
-          <li class="list-inline-item">
-            <a href="#">Privacy</a>
-          </li>
-          <li class="list-inline-item">
-            <a href="#">Terms</a>
-          </li>
-          <li class="list-inline-item">
-            <a href="#">FAQ</a>
-          </li>
-        </ul>
+        <!--<ul class="list-inline">-->
+        <!--  <li class="list-inline-item">-->
+        <!--    <a href="#">Privacy</a>-->
+        <!--  </li>-->
+        <!--  <li class="list-inline-item">-->
+        <!--    <a href="#">Terms</a>-->
+        <!--  </li>-->
+        <!--  <li class="list-inline-item">-->
+        <!--    <a href="#">FAQ</a>-->
+        <!--  </li>-->
+        <!--</ul>-->
       </div>
     </footer>
 

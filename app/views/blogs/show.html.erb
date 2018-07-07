@@ -1,4 +1,4 @@
-<p id="notice"><%= notice %></p>
+<!--<p id="notice"><%= notice %></p>-->
 
 <p>
   <strong>Content:</strong>
@@ -7,7 +7,7 @@
 
 <p>
   <strong>Image:</strong>
-  <%= @blog.image %>
+  <%= image_tag @blog.image %>
 </p>
 <% unless @blog.user == current_user %>
   <% if @favorite.present? %>
