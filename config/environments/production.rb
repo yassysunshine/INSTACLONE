@@ -62,11 +62,11 @@ Rails.application.configure do
   # config.active_job.queue_name_prefix = "INSTACLONE_#{Rails.env}"
   config.action_mailer.perform_caching = false
   
-  config.action_mailer.default_url_options = { host:'dive-into-code-yassy.c9users.io'}
+  config.action_mailer.default_url_options = { host:'beautiful-yosemite-65452'}
   ActionMailer::Base.delivery_method = :smtp
   ActionMailer::Base.smtp_settings = {
-    user_name: ENV['app101685631@heroku.com'],
-    password: ENV['klusogln6122'],
+    user_name: ENV['SENDGRID_USERNAME'],
+    password: ENV['SENDGRID_PASSWORD'],
     domain: "heroku.com",
     address: "smtp.SendGrid.net",
     port: 587,
