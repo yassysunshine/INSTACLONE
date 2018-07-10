@@ -61,7 +61,7 @@ Rails.application.configure do
   # config.active_job.queue_adapter     = :resque
   # config.active_job.queue_name_prefix = "INSTACLONE_#{Rails.env}"
   config.action_mailer.perform_caching = false
-  config.action_mailer.default_url_options = {host: 'beautiful-yosemite-65452'}
+  config.action_mailer.default_url_options = {host: 'https://beautiful-yosemite-65452.herokuapp.com/'}
   ActionMailer::Base.delivery_method = :smtp
   ActionMailer::Base.smtp_settings = {
     user_name: ENV['SENDGRID_USERNAME'],
